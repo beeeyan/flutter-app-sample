@@ -23,7 +23,7 @@ class SampleListPage extends StatelessWidget {
             FilledButton(
               onPressed: () => context.go('/${DropdownFromFieldPage.path}'),
               child: const Text('ドロップダウンサンプル'),
-            )
+            ),
           ],
         ),
       ),

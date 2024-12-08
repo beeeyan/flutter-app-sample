@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../feature/field_size/presentation/field_size_sample.dart';
 import '../feature/pokemon/presentation/pokemon_view.dart';
+import '../field_sample_list.dart';
 import '../my_home.dart';
 import '../sample_list.dart';
 
@@ -27,9 +27,9 @@ enum BottomBarPageType {
     SampleListPage(),
   ),
   fourthPage(
-    'フィールドのサイズ変更',
+    'フィールドのサイズ変更サンプル',
     Icon(Icons.bookmark_outlined),
-    FieldSizeSamplePage(),
+    FieldSampleList(),
   );
 
   const BottomBarPageType(

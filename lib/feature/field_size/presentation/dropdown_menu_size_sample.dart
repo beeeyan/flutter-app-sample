@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
-import 'widget/custom_size_text_field.dart';
+import 'widget/custom_size_dropdown_menu.dart';
 
-class TextFieldSizeSamplePage extends StatelessWidget {
-  const TextFieldSizeSamplePage({super.key});
+class DorpdownMenuSamplePage extends StatelessWidget {
+  const DorpdownMenuSamplePage({super.key});
 
-  static const path = 'textfieldsize';
+  static const path = 'dorpdownmenusize';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('テキストフィールドのサイズ変更'),
+        title: const Text('DorpdownMenu'),
       ),
       body: const Padding(
         padding: EdgeInsets.symmetric(horizontal: 16),
@@ -30,7 +30,7 @@ class TextFieldSizeSamplePage extends StatelessWidget {
                 ),
               ),
               Gap(2),
-              CustomSizeTextField(
+              CustomSizeDropdownMenu(
                 fontSize: 8,
                 contentPadding: EdgeInsets.symmetric(horizontal: 8),
               ),
@@ -44,7 +44,7 @@ class TextFieldSizeSamplePage extends StatelessWidget {
                 ),
               ),
               Gap(2),
-              CustomSizeTextField(
+              CustomSizeDropdownMenu(
                 contentPadding: EdgeInsets.symmetric(horizontal: 8),
               ),
               Gap(16),
@@ -57,7 +57,7 @@ class TextFieldSizeSamplePage extends StatelessWidget {
                 ),
               ),
               Gap(2),
-              CustomSizeTextField(
+              CustomSizeDropdownMenu(
                 fontSize: 32,
                 contentPadding: EdgeInsets.symmetric(horizontal: 8),
               ),
@@ -71,7 +71,7 @@ class TextFieldSizeSamplePage extends StatelessWidget {
                 ),
               ),
               Gap(2),
-              CustomSizeTextField(
+              CustomSizeDropdownMenu(
                 fontSize: 64,
                 contentPadding: EdgeInsets.symmetric(horizontal: 8),
               ),

@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_sample/feature/field_size/presentation/widget/custom_size_dropdown_button_form_field.dart';
+import 'package:flutter_app_sample/feature/field_size/presentation/widget/custom_size_dropdown_menu.dart';
 import 'package:gap/gap.dart';
 
 import 'widget/custom_size_text_field.dart';
 
-class TextFieldSizeSamplePage extends StatelessWidget {
-  const TextFieldSizeSamplePage({super.key});
+class FieldSizeSamplePage extends StatelessWidget {
+  const FieldSizeSamplePage({super.key});
 
-  static const path = 'textfieldsize';
+  static const path = 'fieldsize';
 
   @override
   Widget build(BuildContext context) {
@@ -22,58 +24,57 @@ class TextFieldSizeSamplePage extends StatelessWidget {
             children: [
               Gap(18),
               Text(
-                'FontSize 8',
+                'FontSize 18 textField',
                 style: TextStyle(
                   fontFamily: 'NotoSansJP',
                   fontWeight: FontWeight.w400,
-                  fontSize: 8,
+                  fontSize: 18,
                 ),
               ),
               Gap(2),
               CustomSizeTextField(
-                fontSize: 8,
-                contentPadding: EdgeInsets.symmetric(horizontal: 8),
+                fontSize: 18,
+                contentPadding: EdgeInsets.symmetric(
+                  horizontal: 8,
+                  vertical: 8,
+                ),
+                height: 42,
               ),
               Gap(16),
               Text(
-                'FontSize 16',
+                'FontSize 18 dropdownButtonFormField',
                 style: TextStyle(
                   fontFamily: 'NotoSansJP',
                   fontWeight: FontWeight.w400,
-                  fontSize: 16,
+                  fontSize: 18,
                 ),
               ),
               Gap(2),
-              CustomSizeTextField(
-                contentPadding: EdgeInsets.symmetric(horizontal: 8),
+              CustomSizeDropdownButtonFormField(
+                fontSize: 18,
+                contentPadding: EdgeInsets.symmetric(
+                  horizontal: 8,
+                  vertical: 8,
+                ),
+                height: 42,
               ),
               Gap(16),
               Text(
-                'FontSize 32',
+                'FontSize 18 dropdownMenu',
                 style: TextStyle(
                   fontFamily: 'NotoSansJP',
                   fontWeight: FontWeight.w400,
-                  fontSize: 32,
+                  fontSize: 18,
                 ),
               ),
               Gap(2),
-              CustomSizeTextField(
-                fontSize: 32,
-                contentPadding: EdgeInsets.symmetric(horizontal: 8),
-              ),
-              Gap(16),
-              Text(
-                'FontSize 64',
-                style: TextStyle(
-                  fontFamily: 'NotoSansJP',
-                  fontWeight: FontWeight.w400,
-                  fontSize: 64,
+              CustomSizeDropdownMenu(
+                fontSize: 18,
+                contentPadding: EdgeInsets.symmetric(
+                  horizontal: 8,
+                  vertical: 8,
                 ),
-              ),
-              Gap(2),
-              CustomSizeTextField(
-                fontSize: 64,
-                contentPadding: EdgeInsets.symmetric(horizontal: 8),
+                height: 42,
               ),
             ],
           ),

@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 
-class CustomSizeTextField extends StatelessWidget {
-  const CustomSizeTextField({
+class CustomSizeDropdownButtonFormField extends StatelessWidget {
+  const CustomSizeDropdownButtonFormField({
     super.key,
     this.controller,
     this.fontSize = 16,
     this.width,
     this.height,
-    this.maxLength,
-    this.maxLines,
     this.keyboardType = TextInputType.text,
     this.isDende = true,
     this.contentPadding,
@@ -18,8 +16,6 @@ class CustomSizeTextField extends StatelessWidget {
   final double fontSize;
   final double? width;
   final double? height;
-  final int? maxLength;
-  final int? maxLines;
   final TextInputType keyboardType;
   final bool isDende;
   final EdgeInsetsGeometry? contentPadding;
@@ -32,65 +28,67 @@ class CustomSizeTextField extends StatelessWidget {
         ? SizedBox(
             width: width,
             height: height,
-            child: CustomTextField(
-              controller: controller,
+            child: CustomDropdownButtonFormField(
               fontSize: fontSize,
-              maxLength: maxLength,
-              maxLines: maxLines,
               keyboardType: keyboardType,
+              isDende: isDende,
               contentPadding: contentPadding,
             ),
           )
-        : CustomTextField(
-            controller: controller,
+        : CustomDropdownButtonFormField(
             fontSize: fontSize,
-            maxLength: maxLength,
-            maxLines: maxLines,
             keyboardType: keyboardType,
+            isDende: isDende,
             contentPadding: contentPadding,
           );
   }
 }
 
-class CustomTextField extends StatelessWidget {
-  const CustomTextField({
+class CustomDropdownButtonFormField extends StatelessWidget {
+  const CustomDropdownButtonFormField({
     super.key,
-    this.controller,
     this.fontSize = 16,
-    this.maxLength,
-    this.maxLines,
     this.keyboardType = TextInputType.text,
     this.isDende = true,
     this.contentPadding,
   });
 
-  final TextEditingController? controller;
   final double fontSize;
-  final int? maxLength;
-  final int? maxLines;
   final TextInputType keyboardType;
   final bool isDende;
   final EdgeInsetsGeometry? contentPadding;
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return DropdownButtonFormField(
       style: TextStyle(
+        color: Colors.black,
         fontFamily: 'NotoSansJP',
         fontWeight: FontWeight.w400,
         fontSize: fontSize,
         // 何もフォントは入れない場合、Androidでは1.5だった。
       ),
-      controller: controller,
-      maxLength: maxLength,
-      maxLines: maxLines,
-      keyboardType: keyboardType,
       decoration: InputDecoration(
         // width : 1.0
         border: const OutlineInputBorder(),
         contentPadding: contentPadding,
         isDense: isDende,
       ),
+      items: const [
+        DropdownMenuItem(
+          value: 'あいうえお',
+          child: Text('あいうえお'),
+        ),
+        DropdownMenuItem(
+          value: 'かきくけこ',
+          child: Text('かきくけこ'),
+        ),
+        DropdownMenuItem(
+          value: 'さしすせそ',
+          child: Text('さしすせそ'),
+        ),
+      ],
+      onChanged: (value) => (),
     );
   }
 }

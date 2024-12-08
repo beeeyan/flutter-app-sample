@@ -6,6 +6,7 @@ import 'util/go_router.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
+  // debugPaintSizeEnabled = true;
   runApp(
     const ProviderScope(
       child: MyApp(),

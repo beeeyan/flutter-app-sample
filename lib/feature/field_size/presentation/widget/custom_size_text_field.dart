@@ -39,6 +39,7 @@ class CustomSizeTextField extends StatelessWidget {
               maxLines: maxLines,
               keyboardType: keyboardType,
               contentPadding: contentPadding,
+              isDende: isDende,
             ),
           )
         : CustomTextField(
@@ -48,6 +49,7 @@ class CustomSizeTextField extends StatelessWidget {
             maxLines: maxLines,
             keyboardType: keyboardType,
             contentPadding: contentPadding,
+            isDende: isDende,
           );
   }
 }
@@ -79,7 +81,7 @@ class CustomTextField extends StatelessWidget {
         fontFamily: 'NotoSansJP',
         fontWeight: FontWeight.w400,
         fontSize: fontSize,
-        // 何もフォントは入れない場合、Androidでは1.5だった。
+        // height: 1,
       ),
       controller: controller,
       maxLength: maxLength,

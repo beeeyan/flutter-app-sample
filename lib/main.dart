@@ -20,6 +20,7 @@ class MyApp extends ConsumerWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
+        fontFamily: 'NotoSansJP',
         primarySwatch: Colors.blue,
       ),
       home: const RootPage(),

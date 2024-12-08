@@ -16,11 +16,73 @@ class FieldSizeSamplePage extends StatelessWidget {
             children: [
               Gap(18),
               Text(
-                'フォントサイズ 16',
-                style: TextStyle(fontSize: 16),
+                'FontSize 8',
+                style: TextStyle(
+                  fontFamily: 'NotoSansJP',
+                  fontWeight: FontWeight.w400,
+                  fontSize: 8,
+                ),
               ),
               Gap(2),
-              CustomSizeTextField(),
+              CustomSizeTextField(
+                fontSize: 8,
+                contentPadding: EdgeInsets.symmetric(horizontal: 8),
+              ),
+              Gap(16),
+              Text(
+                'FontSize 16',
+                style: TextStyle(
+                  fontFamily: 'NotoSansJP',
+                  fontWeight: FontWeight.w400,
+                  fontSize: 16,
+                ),
+              ),
+              Gap(2),
+              CustomSizeTextField(
+                contentPadding: EdgeInsets.symmetric(horizontal: 8),
+              ),
+              Gap(16),
+              Text(
+                'FontSize 32',
+                style: TextStyle(
+                  fontFamily: 'NotoSansJP',
+                  fontWeight: FontWeight.w400,
+                  fontSize: 32,
+                ),
+              ),
+              Gap(2),
+              CustomSizeTextField(
+                fontSize: 32,
+                contentPadding: EdgeInsets.symmetric(horizontal: 8),
+              ),
+              Gap(16),
+              Text(
+                'FontSize 50',
+                style: TextStyle(
+                  fontFamily: 'NotoSansJP',
+                  fontWeight: FontWeight.w400,
+                  fontSize: 50,
+                ),
+              ),
+              Gap(2),
+              CustomSizeTextField(
+                fontSize: 50,
+                contentPadding: EdgeInsets.symmetric(horizontal: 8),
+              ),
+              Gap(16),
+              Text(
+                'FontSize 64',
+                style: TextStyle(
+                  fontFamily: 'NotoSansJP',
+                  fontWeight: FontWeight.w400,
+                  fontSize: 64,
+                ),
+              ),
+              Gap(2),
+              CustomSizeTextField(
+                fontSize: 64,
+                contentPadding: EdgeInsets.symmetric(horizontal: 8),
+              ),
             ],
           ),
         ),

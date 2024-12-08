@@ -20,7 +20,7 @@ class RootPage extends ConsumerWidget {
         // mainAxisAlignment: MainAxisAlignment.end,
         mainAxisSize: MainAxisSize.min,
         children: [
-          const AdBanner(),
+          // const AdBanner(),
           BottomNavigationBar(
             type: BottomNavigationBarType.fixed,
             currentIndex: pageType.index,

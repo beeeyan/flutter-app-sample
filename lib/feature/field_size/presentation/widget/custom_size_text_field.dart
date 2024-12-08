@@ -10,6 +10,7 @@ class CustomSizeTextField extends StatelessWidget {
     this.maxLength,
     this.maxLines,
     this.keyboardType = TextInputType.text,
+    this.contentPadding,
   });
 
   final TextEditingController? controller;
@@ -18,8 +19,8 @@ class CustomSizeTextField extends StatelessWidget {
   final double? height;
   final int? maxLength;
   final int? maxLines;
-
   final TextInputType keyboardType;
+  final EdgeInsetsGeometry? contentPadding;
 
   @override
   Widget build(BuildContext context) {
@@ -35,6 +36,7 @@ class CustomSizeTextField extends StatelessWidget {
               maxLength: maxLength,
               maxLines: maxLines,
               keyboardType: keyboardType,
+              contentPadding: contentPadding,
             ),
           )
         : CustomTextField(
@@ -43,6 +45,7 @@ class CustomSizeTextField extends StatelessWidget {
             maxLength: maxLength,
             maxLines: maxLines,
             keyboardType: keyboardType,
+            contentPadding: contentPadding,
           );
   }
 }
@@ -55,6 +58,7 @@ class CustomTextField extends StatelessWidget {
     this.maxLength,
     this.maxLines,
     this.keyboardType = TextInputType.text,
+    this.contentPadding,
   });
 
   final TextEditingController? controller;
@@ -62,20 +66,26 @@ class CustomTextField extends StatelessWidget {
   final int? maxLength;
   final int? maxLines;
   final TextInputType keyboardType;
+  final EdgeInsetsGeometry? contentPadding;
 
   @override
   Widget build(BuildContext context) {
     return TextField(
       style: TextStyle(
+        fontFamily: 'NotoSansJP',
+        fontWeight: FontWeight.w400,
         fontSize: fontSize,
+        // 何もフォントは入れない場合、Androidでは1.5だった。
       ),
       controller: controller,
       maxLength: maxLength,
       maxLines: maxLines,
       keyboardType: keyboardType,
-      decoration: const InputDecoration(
+      decoration: InputDecoration(
         // width : 1.0
-        border: OutlineInputBorder(),
+        border: const OutlineInputBorder(),
+        contentPadding: contentPadding,
+        isDense: true,
       ),
     );
   }

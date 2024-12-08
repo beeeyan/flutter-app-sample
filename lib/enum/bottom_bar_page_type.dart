@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
+import '../feature/field_size/presentation/field_size_sample.dart';
 import '../feature/pokemon/presentation/pokemon_view.dart';
 import '../my_home.dart';
 
@@ -18,7 +19,13 @@ enum BottomBarPageType {
     'ポケモン',
     Icon(Icons.bookmark_outlined),
     PokemonViewPage(),
-  );
+  ),
+  thirdPage(
+    'フィールドのサイズ変更',
+    Icon(Icons.bookmark_outlined),
+    FieldSizeSamplePage(),
+  )
+  ;
 
   const BottomBarPageType(
     this.title,

@@ -31,7 +31,7 @@ class RootPage extends ConsumerWidget {
                 BottomNavigationBarItem(
                   icon: pageType.buttonIcon,
                   label: pageType.title,
-                )
+                ),
             ],
           ),
         ],

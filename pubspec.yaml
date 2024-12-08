@@ -30,7 +30,7 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   # app_review: ^2.1.2+1
-  connectivity_plus: ^4.0.1
+  connectivity_plus: ^6.1.0
   cupertino_icons: ^1.0.2
   dio: ^5.1.2
   flutter:
@@ -41,7 +41,7 @@ dependencies:
   google_mobile_ads: ^3.0.0
   hooks_riverpod: ^2.3.6
   logger: ^1.1.0
-  package_info_plus: ^4.0.1
+  package_info_plus: ^8.1.1
   version: ^3.0.2
 
 dev_dependencies:
